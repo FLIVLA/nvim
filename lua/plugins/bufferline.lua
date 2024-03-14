@@ -2,7 +2,7 @@ return {
 	"akinsho/bufferline.nvim",
 	version = "*",
 	dependencies = "nvim-tree/nvim-web-devicons",
-	config = function()
+	config = function ()
 		vim.opt.termguicolors = true
 		require("bufferline").setup({
 			options = {
@@ -15,11 +15,12 @@ return {
 				  }
 				},
 				diagnostics = "nvim_lsp",
-				separator_style = "slant",
+				--separator_style = "slant",
 				modified_icon = '●',
-				show_close_icon = false,
-				show_buffer_close_icons = false,
+				show_close_icon = true,
+				show_buffer_close_icons = true,
 			}
 		})
+		--vim.keymap.set('n', '<C-o>', ':BufferLineClose<CR>')
 	end,
 }
