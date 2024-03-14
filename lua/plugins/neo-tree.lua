@@ -9,6 +9,6 @@ return {
     },
     config = function()
         --key mappings for neo-tree
-        vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>")
+        vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", { silent = true })
     end,
 }
